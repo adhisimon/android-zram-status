@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZRAM Status</string>
+    
+    <string name="action_reload">Reload</string>
+    <string name="action_exit">Exit</string>
+    
+    <string name="zram_disk_size">Disk Size:</string>
+    <string name="zram_compressed_data_size">Compressed Data Size:</string>
+	<string name="zram_original_data_size">Original Data Size:</string>
+    <string name="zram_mem_used_total">Total Memory Used:</string>
+    
+    <string name="zram_compression_ratio">Compression Ratio:</string>
+    <string name="zram_used_ratio">Used Ratio:</string>
+    
+</resources>
