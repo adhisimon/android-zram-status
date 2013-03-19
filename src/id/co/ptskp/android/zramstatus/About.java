@@ -1,5 +1,8 @@
 package id.co.ptskp.android.zramstatus;
 
+import java.util.Locale;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -9,7 +12,7 @@ import android.text.Html;
 import android.widget.TextView;
 
 public class About extends Activity {
-	@Override
+	@SuppressLint("DefaultLocale") @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
@@ -23,7 +26,8 @@ public class About extends Activity {
         	String versionName = info.versionName;
         	
         	appVersion.setText(
-        			getString(R.string.text_version)
+        			getString(R.string.app_name)
+        			+ " " + getString(R.string.text_version).toLowerCase(Locale.getDefault())
         			+ " " + versionName 
         			+ "-" + Integer.toString(versionCode)
         		);

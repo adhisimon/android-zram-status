@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TextualActivity extends Activity {
+public class MainActivity extends Activity {
 	private Zram zram;
 	private Timer recalculateTimer;
 	private final int recalculateTimerInterval = 5 * 1000;
@@ -21,7 +21,7 @@ public class TextualActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_textual);
+        setContentView(R.layout.activity_main);
         
         zram = new Zram();
         
