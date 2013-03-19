@@ -1,4 +1,6 @@
-package id.co.ptskp.android.zramstatus;
+package id.or.adhisimon.android.zramstatus;
+
+import id.co.ptskp.android.zramstatus.R;
 
 import java.text.NumberFormat;
 import java.util.Timer;
