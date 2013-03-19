@@ -1,6 +1,8 @@
 package id.co.ptskp.android.zramstatus;
 
 import java.text.NumberFormat;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,13 +13,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TextualActivity extends Activity {
-	Zram zram = new Zram();
+	private Zram zram;
+	private Timer recalculateTimer;
+	private final int recalculateTimerInterval = 5 * 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textual);
-        recalculate();
+        
+        zram = new Zram();
+        
+        recalculateTimerSchedule();
     }
 
 
@@ -41,6 +48,31 @@ public class TextualActivity extends Activity {
     		return super.onOptionsItemSelected(item);
     	}
     }
+    
+    private void recalculateTimerSchedule() {
+    	recalculateTimer = new Timer();
+    	recalculateTimer.schedule(
+    			new TimerTask() {
+					
+					@Override
+					public void run() {
+						recalculateTimerMethod();
+					}
+				}, 
+    			0, recalculateTimerInterval);
+    }
+    
+    private void recalculateTimerMethod() {
+    	runOnUiThread(RecalculateTimerTick);
+    }
+    
+    private Runnable RecalculateTimerTick = new Runnable() {
+		
+		@Override
+		public void run() {
+			recalculate();
+		}
+	};
     
     private void recalculate() {
     	zram.clearCache();
