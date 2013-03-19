@@ -33,16 +33,33 @@
         android:id="@+id/zram_mem_used_total"
         android:text="@string/zram_mem_used_total" />
     
+    <ProgressBar
+    	android:id="@+id/zram_compression_ratio_bar"
+    	android:paddingTop="32sp"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:progress="0" 
+        style="@android:style/Widget.ProgressBar.Horizontal" />
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/zram_compression_ratio"
         android:text="@string/zram_compression_ratio" />
     
+    <ProgressBar
+    	android:id="@+id/zram_used_ratio_bar"
+    	android:paddingTop="32sp"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:progress="0" 
+        style="@android:style/Widget.ProgressBar.Horizontal" />
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/zram_used_ratio"
         android:text="@string/zram_used_ratio" />
+    
     
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -79,21 +80,31 @@ public class TextualActivity extends Activity {
         			+ " bytes"
     			);
     		
+    		final int compressionRatio = Math.round(zram.getCompressionRatio() * 100);
+    		ProgressBar pbZramCompressionRatio = (ProgressBar) findViewById(R.id.zram_compression_ratio_bar);
+    		pbZramCompressionRatio.setProgress(compressionRatio);
+    		
     		TextView tvZramCompressionRatio = (TextView) findViewById(R.id.zram_compression_ratio);
     		tvZramCompressionRatio.setText(
         			getResources().getString(R.string.zram_compression_ratio) 
         			+ " "
-        			+ Integer.toString(Math.round(zram.getCompressionRatio() * 100))
+        			+ Integer.toString(compressionRatio)
         			+ "%"
     			);
+    		
+    		final int usedRatio = Math.round(zram.getUsedRatio() * 100);
+    		ProgressBar pbZramUsedRatio = (ProgressBar) findViewById(R.id.zram_used_ratio_bar);
+    		pbZramUsedRatio.setProgress(usedRatio);
     		
     		TextView tvZramUsedRatio = (TextView) findViewById(R.id.zram_used_ratio);
     		tvZramUsedRatio.setText(
         			getResources().getString(R.string.zram_used_ratio) 
         			+ " "
-        			+ Integer.toString(Math.round(zram.getUsedRatio() * 100))
+        			+ Integer.toString(usedRatio)
         			+ "%"
     			);
+    		
+    		
     		
     	} catch (Exception e) {
     		Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
