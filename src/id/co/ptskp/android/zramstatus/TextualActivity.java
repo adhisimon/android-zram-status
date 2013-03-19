@@ -5,6 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,6 +41,10 @@ public class TextualActivity extends Activity {
     	switch (item.getItemId()) {
     	case R.id.action_reload:
     		recalculate();
+    		return true;
+    	case R.id.action_about:
+    		Intent aboutIntent = new Intent(this, About.class);
+    		startActivity(aboutIntent);
     		return true;
     	case R.id.action_exit:
     		finish();
