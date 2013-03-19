@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TextualActivity extends Activity {
+	Zram zram = new Zram();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +43,7 @@ public class TextualActivity extends Activity {
     }
     
     private void recalculate() {
-    	
-    	Zram zram = new Zram();
+    	zram.clearCache();
     	
     	try {
     		NumberFormat nf = NumberFormat.getNumberInstance();
