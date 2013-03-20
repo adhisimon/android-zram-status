@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">ZRAM Status</string>
-    <string name="app_description">Android Application to show zram (http://en.wikipedia.org/wiki/ZRam) status. Source code available at https://github.com/adhisimon/android-zram-status for free.</string>
+    <string name="app_description">Android Application to show zram (http://en.wikipedia.org/wiki/ZRam) status. Please visit http://adhisimon.github.com/android-zram-status/ for more information. Source code available at https://github.com/adhisimon/android-zram-status for free.</string>
     <string name="app_license"><![CDATA[Distributed under the following BSD 3-Clause License:<br>
 <br>
 Copyright (c) 2013 Adhidarma. All rights reserved.<br>
