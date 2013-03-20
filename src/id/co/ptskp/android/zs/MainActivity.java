@@ -6,6 +6,7 @@ import java.util.TimerTask;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         zram = new Zram();
+        
+        TextView tvDeviceInfo = (TextView) findViewById(R.id.device_info);
+        tvDeviceInfo.setText(
+        		zram.getDeviceName()
+        	);
+        
+        TextView tvDeviceInfo2 = (TextView) findViewById(R.id.device_info2);
+        tvDeviceInfo2.setText(Build.DISPLAY);
         
         TextView tvKernelVersion = (TextView) findViewById(R.id.kernel_version);
         tvKernelVersion.setText(

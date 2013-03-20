@@ -3,6 +3,8 @@ package id.co.ptskp.android.zs;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import android.os.Build;
+
 public class Zram {
 	
 	private final String ZRAMSTATFILE_DISKSIZE = "/sys/block/zram0/disksize";
@@ -119,5 +121,14 @@ public class Zram {
 	public String getKernelVersion() {
 		return getKernelVersionFromSystemProperty();
 	}
-
+	
+	public String getDeviceName() {
+		String manufacturer = Build.MANUFACTURER;
+		String model = Build.MODEL;
+		if (model.startsWith(manufacturer)) {
+			return model;
+		} else {
+			return manufacturer + " " + model;
+		}
+	}
 }

@@ -64,6 +64,19 @@
     <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/device_info"
+        android:textIsSelectable="true" />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/device_info2"
+        android:textIsSelectable="true" />
+        
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/kernel_version"
         android:textIsSelectable="true" />
         
