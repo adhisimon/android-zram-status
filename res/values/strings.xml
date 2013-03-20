@@ -20,14 +20,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="action_reload">Reload</string>
     <string name="action_about">About</string>
     <string name="action_exit">Exit</string>
+       
+    <string name="zram_disk_size">ZRAM Disk Size:</string>
+    <string name="zram_compressed_data_size">ZRAM Compressed Data Size:</string>
+	<string name="zram_original_data_size">ZRAM Original Data Size:</string>
+    <string name="zram_mem_used_total">ZRAM Total Memory Used:</string>
     
-    <string name="zram_disk_size">Disk Size:</string>
-    <string name="zram_compressed_data_size">Compressed Data Size:</string>
-	<string name="zram_original_data_size">Original Data Size:</string>
-    <string name="zram_mem_used_total">Total Memory Used:</string>
+    <string name="zram_compression_ratio">ZRAM Compression Ratio:</string>
+    <string name="zram_used_ratio">ZRAM Used Ratio:</string>
     
-    <string name="zram_compression_ratio">Compression Ratio:</string>
-    <string name="zram_used_ratio">Used Ratio:</string>
+    <string name="ram_available">Free RAM:</string>
     
     <string name="text_kernel">Kernel:</string>
     <string name="text_device">Device:</string>

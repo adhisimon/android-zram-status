@@ -74,6 +74,10 @@
         android:id="@+id/kernel_version"
         android:textIsSelectable="true" />
         
-    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ram_available"
+        android:textIsSelectable="true" />
     
 </LinearLayout>

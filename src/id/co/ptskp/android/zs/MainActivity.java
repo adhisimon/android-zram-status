@@ -5,6 +5,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.ActivityManager.MemoryInfo;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,18 +28,7 @@ public class MainActivity extends Activity {
         
         zram = new Zram();
         
-        TextView tvDeviceInfo = (TextView) findViewById(R.id.device_info);
-        tvDeviceInfo.setText(
-        		zram.getDeviceName()
-        		+ " - " + Build.DISPLAY
-        	);
-         
-        TextView tvKernelVersion = (TextView) findViewById(R.id.kernel_version);
-        tvKernelVersion.setText(
-        		getString(R.string.text_kernel)
-        		+ " " + zram.getKernelVersion()
-        	);
-        
+        updateDeviceInfo();
         recalculateTimerSchedule();
     }
 
@@ -154,13 +145,40 @@ public class MainActivity extends Activity {
         			+ "%"
     			);
     		
-    		
-    		
+    		MemoryInfo mi = new MemoryInfo();
+            ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+            activityManager.getMemoryInfo(mi);
+            
+            //long memoryTotal = mi.totalMem;
+            long memoryAvail = mi.availMem;
+            //long memoryUsed = memoryTotal - memoryAvail;
+
+            TextView tvRamAvailable = (TextView) findViewById(R.id.ram_available);
+            tvRamAvailable.setText(
+            		getString(R.string.ram_available)
+            		+ " " + nf.format(memoryAvail)
+            		+ " bytes"
+            	);
+            
     	} catch (Exception e) {
     		Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
     		finish();
     	}
     	
+    }
+    
+    private void updateDeviceInfo() {
+    	TextView tvDeviceInfo = (TextView) findViewById(R.id.device_info);
+        tvDeviceInfo.setText(
+        		zram.getDeviceName()
+        		+ " - " + Build.DISPLAY
+        	);
+         
+        TextView tvKernelVersion = (TextView) findViewById(R.id.kernel_version);
+        tvKernelVersion.setText(
+        		getString(R.string.text_kernel)
+        		+ " " + zram.getKernelVersion()
+        	);
     }
     
 }
