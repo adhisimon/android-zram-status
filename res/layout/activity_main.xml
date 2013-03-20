@@ -61,5 +61,12 @@
         android:id="@+id/zram_used_ratio"
         android:text="@string/zram_used_ratio" />
     
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kernel_version"
+        android:textIsSelectable="true" />
+        
+    
     
 </LinearLayout>

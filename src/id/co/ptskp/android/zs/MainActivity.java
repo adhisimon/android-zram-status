@@ -25,6 +25,12 @@ public class MainActivity extends Activity {
         
         zram = new Zram();
         
+        TextView tvKernelVersion = (TextView) findViewById(R.id.kernel_version);
+        tvKernelVersion.setText(
+        		getString(R.string.text_kernel)
+        		+ " " + zram.getKernelVersion()
+        	);
+        
         recalculateTimerSchedule();
     }
 

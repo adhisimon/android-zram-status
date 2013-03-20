@@ -29,5 +29,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="zram_compression_ratio">Compression Ratio:</string>
     <string name="zram_used_ratio">Used Ratio:</string>
     
+    <string name="text_kernel">Kernel:</string>
+    <string name="text_device">Device:</string>
     <string name="text_version">Version</string>
 </resources>

@@ -111,5 +111,13 @@ public class Zram {
 	public float getUsedRatio() throws Exception {
 		return (float) getOriginalDataSize() / (float) getDiskSize();
  	}
+	
+	public String getKernelVersionFromSystemProperty() {
+		return System.getProperty("os.version");
+	}
+	
+	public String getKernelVersion() {
+		return getKernelVersionFromSystemProperty();
+	}
 
 }
