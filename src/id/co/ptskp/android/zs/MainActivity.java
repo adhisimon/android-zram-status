@@ -50,6 +50,18 @@ public class MainActivity extends Activity {
     		Intent aboutIntent = new Intent(this, About.class);
     		startActivity(aboutIntent);
     		return true;
+    	case R.id.action_share:
+    		Intent shareIntent = new Intent();
+    		shareIntent.setAction(Intent.ACTION_SEND);
+    		shareIntent.putExtra(
+    				Intent.EXTRA_TEXT, 
+    				"Check out \"" 
+    				+ getString(R.string.app_name) 
+    				+ "\" - https://play.google.com/store/apps/details?id=id.co.ptskp.android.zs"
+    			);
+    		shareIntent.setType("text/plain");
+    		startActivity(shareIntent);
+    		return true;
     	case R.id.action_exit:
     		finish();
     		return true;
