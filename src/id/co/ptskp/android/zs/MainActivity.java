@@ -29,11 +29,9 @@ public class MainActivity extends Activity {
         TextView tvDeviceInfo = (TextView) findViewById(R.id.device_info);
         tvDeviceInfo.setText(
         		zram.getDeviceName()
+        		+ " - " + Build.DISPLAY
         	);
-        
-        TextView tvDeviceInfo2 = (TextView) findViewById(R.id.device_info2);
-        tvDeviceInfo2.setText(Build.DISPLAY);
-        
+         
         TextView tvKernelVersion = (TextView) findViewById(R.id.kernel_version);
         tvKernelVersion.setText(
         		getString(R.string.text_kernel)
