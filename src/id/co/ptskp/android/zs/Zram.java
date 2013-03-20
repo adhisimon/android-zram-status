@@ -1,4 +1,4 @@
-package id.or.adhisimon.android.zramstatus;
+package id.co.ptskp.android.zs;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

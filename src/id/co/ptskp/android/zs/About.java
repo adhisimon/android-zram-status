@@ -1,6 +1,4 @@
-package id.or.adhisimon.android.zramstatus;
-
-import id.co.ptskp.android.zramstatus.R;
+package id.co.ptskp.android.zs;
 
 import java.util.Locale;
 
