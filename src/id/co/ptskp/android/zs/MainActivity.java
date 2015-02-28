@@ -132,7 +132,14 @@ public class MainActivity extends Activity {
         			+ nf.format(zram.getMemUsedTotal())
         			+ " bytes"
     			);
-    		
+
+    		TextView tvZramNumberOfFiles = (TextView) findViewById(R.id.zram_number_of_files);
+    		tvZramNumberOfFiles.setText(
+        			getResources().getString(R.string.zram_number_of_files) 
+        			+ " "
+        			+ nf.format(zram.getNumberOfFiles())
+    			);
+
     		final int compressionRatio = Math.round(zram.getCompressionRatio() * 100);
     		ProgressBar pbZramCompressionRatio = (ProgressBar) findViewById(R.id.zram_compression_ratio_bar);
     		pbZramCompressionRatio.setProgress(compressionRatio);

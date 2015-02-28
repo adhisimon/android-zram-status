@@ -26,6 +26,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <string name="zram_compressed_data_size">ZRAM Compressed Data Size:</string>
 	<string name="zram_original_data_size">ZRAM Original Data Size:</string>
     <string name="zram_mem_used_total">ZRAM Total Memory Used:</string>
+    <string name="zram_number_of_files">ZRAM Number Of Files:</string>
     
     <string name="zram_compression_ratio">ZRAM Compression Ratio:</string>
     <string name="zram_used_ratio">ZRAM Used Ratio:</string>
